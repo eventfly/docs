@@ -50,7 +50,7 @@ data: {
 **Under Update**
 ## /event/*
 #### /event/?organizer_id=
-- GET: Return a list of all events under that organizer w/ ID. If organizer not specified, return all events.
+- GET: Return a list of all categorized events under that organizer w/ ID. If organizer not specified, return all events.
 - POST: Create a new event with data
 ```
 data: {
@@ -65,6 +65,13 @@ data: {
   ticket_price: number
   promote: "yes"/"no"
   email_filter: string
+}
+```
+```
+data: {
+  past_events: list()
+  current_events: list()
+  upcoming_events: list()
 }
 ```
   
